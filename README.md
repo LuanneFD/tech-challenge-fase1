@@ -41,7 +41,7 @@ Análise exploratória, pré-processamento, redução de dimensionalidade (PCA) 
 
    Ou abra o arquivo `fase1.ipynb` diretamente pelo VS Code / Jupyter Lab.
 
-5. **Execute todas as células em ordem**, do início ao fim (no menu: *Kernel/Run* → *Restart Kernel and Run All Cells*). O notebook não depende de nenhum arquivo externo além do `data.csv` incluído.
+5. **Execute todas as células em ordem**, um por vez, do início ao fim.
 
 ## O que o notebook faz
 
