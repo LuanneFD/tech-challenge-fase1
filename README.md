@@ -45,15 +45,11 @@ Análise exploratória, pré-processamento, redução de dimensionalidade (PCA) 
 
 ## O que o notebook faz
 
-1. **Exploração e pré-processamento dos dados** remoção de colunas inválidas, tratamento da variável alvo (`diagnosis`), análise de correlação com o diagnóstico.
-2. **Padronização das variáveis** com `StandardScaler`.
+1. **Exploração e pré-processamento dos dados** remoção de colunas inválidas, tratamento do target "diagnosis", análise de correlação com o diagnóstico.
+2. **Padronização das variáveis** com método "StandardScaler".
 3. **Redução de dimensionalidade (PCA)** reduz as 30 variáveis originais para 5 componentes principais (PC1 a PC5), explicando ~84,7% da variância dos dados.
 4. **Verificação de normalidade** dos componentes via teste de Shapiro-Wilk.
 5. **Treinamento de 4 modelos de classificação:** KNN, Regressão Logística, SVM e Árvore de Decisão, avaliados por acurácia, recall e F1-score.
 6. **Verificação dos resultados (SHAP)** para os dois modelos de melhor desempenho (Regressão Logística e SVM), identificando quais componentes mais influenciam cada previsão.
 7. **Discussão crítica final** sobre a viabilidade do uso do modelo em um contexto clínico real.
 
-## Observações
-
-- O dataset está desbalanceado (357 casos benignos vs. 212 malignos), o que motivou a escolha do **F1-score** e do **recall da classe maligna** como métricas principais de avaliação, em vez da acurácia isolada.
-- Não foi feito tratamento de outliers, por decisão consciente: no contexto médico, um registro fora do padrão pode representar um caso raro da doença que não deve ser descartado.
